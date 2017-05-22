@@ -8,6 +8,7 @@
   <div class="col-lg-12">
     <div>
       <h1><a target="_blank" href="http://www.arontseggai.com">Aron Tseggai</a></h1>
+      <%= link("plus", to: "/plus") %>
     </div>
   </div>
 
