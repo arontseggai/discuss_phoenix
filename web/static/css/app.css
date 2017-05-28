@@ -22,3 +22,8 @@
     bottom: 0;
     padding: 0 120px 100px 0; 
 }
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+}

@@ -6,15 +6,20 @@
 
 <section id="topics-index">
     <div class="row">
-        <div class="col s12 m8">
+        <div class="col s12 m10">
             <h5>Topics</h5>
             <ul class="collection">
                 <%= for topic <- @topics do %>
-                    <li class="collection-item">
+                    <li class="collection-item list-item">
                          <p><%= topic.title %></p>
-                         <%= link to: topic_path(@conn, :edit, topic.id) do %>
-                            edit
-                         <%= end %> 
+                         <div class="right">
+                            <%= link to: topic_path(@conn, :edit, topic), class: "btn blue" do %>
+                                edit
+                            <%= end %>
+                            <%= link to: topic_path(@conn, :delete, topic), method: :delete, data: [confirm: "Are you sure?"], class: "btn red btn-small" do %>
+                                delete
+                            <%= end %>                                                      
+                         </div>
                     </li>
                 <%= end %>
             </ul>
