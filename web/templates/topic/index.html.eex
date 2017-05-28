@@ -1,0 +1,23 @@
+<section id="secondary-nav">
+    <%= link to: topic_path(@conn, :new), class: "btn-floating btn-large waves-effect waves-light red" do %>
+        <i class="material-icons">add</i>
+    <% end %>
+</section>
+
+<section id="topics-index">
+    <div class="row">
+        <div class="col s12 m8">
+            <h5>Topics</h5>
+            <ul class="collection">
+                <%= for topic <- @topics do %>
+                    <li class="collection-item">
+                         <p><%= topic.title %></p>
+                         <%= link to: topic_path(@conn, :edit, topic.id) do %>
+                            edit
+                         <%= end %> 
+                    </li>
+                <%= end %>
+            </ul>
+        </div>
+    </div>
+</section>

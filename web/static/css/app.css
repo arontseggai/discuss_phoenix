@@ -1,1 +1,24 @@
 /* This file is for your main application css. */
+
+.help-block {
+    color: red;
+    text-transform: capitalize;
+    position: absolute;
+    top: 43px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#main-container {
+    margin: 20px 0 0 0;
+}
+
+#secondary-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 0 120px 100px 0; 
+}
